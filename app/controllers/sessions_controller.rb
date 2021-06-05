@@ -20,9 +20,14 @@ class SessionsController < ApplicationController
       display_name: user_spotify_info[:display_name],
       email: user_spotify_info[:email]
     ).first_or_create
-    
+
     session[:user_id] = @user.id
 
     redirect_to lovers_url
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url, alert: 'Logged out'
   end
 end
