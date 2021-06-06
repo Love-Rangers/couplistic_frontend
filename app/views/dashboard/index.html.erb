@@ -1,4 +1,13 @@
-<h1>Hi <%= @user.display_name %>!!</h1>
+
+<h1>Hi <%= @user.display_name %>!</h1>
+
+<section class="weather-window">
+    <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <p>
+    The Next Full Moon is <%= @next_full_moon %>
+  </p>
+</section>
+
 <section>
   <h2>♥️Listen to these Songs tonight with your partner♥️</h2>
   <% @songs_n_artists.each do |song| %>
@@ -7,4 +16,11 @@
     </p>
   <% end %>
 </section>
-<%= link_to "Logout", logout_path, method: :delete %>
+
+<footer class="logout">
+  <%= link_to "Logout", logout_path, method: :delete %>
+</footer>
+
+
+
+
