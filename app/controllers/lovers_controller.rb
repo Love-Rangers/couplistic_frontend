@@ -1,4 +1,5 @@
 class LoversController < ApplicationController
+
   def index
     @user = User.find_by(id: session[:user_id])
     if @user.nil?
@@ -10,7 +11,7 @@ class LoversController < ApplicationController
       # @recently_played_songs = SpotifySongsFacade.recently_played(@user.id)
       # @events = CouplisticFacade.get_events(@user.id)
       # @calender = CalenderFacade.populate_calender(@user.id)
-      # @next_full_moon = FullMoonService.new(Time.now)
+      @next_full_moon = Time.at(FullMoonFacade.next_full_moon).strftime("%A, %b %e")
 
       render 'dashboard/index'
     end

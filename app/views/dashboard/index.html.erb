@@ -1,2 +1,12 @@
-<h1>Hi <%= @user.display_name %>!!</h1>
-<%= link_to "Logout", logout_path, method: :delete %>
+<h1>Hi <%= @user.display_name %>!</h1>
+
+<section class="weather-window">
+    <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <p>
+    The Next Full Moon is <%= @next_full_moon %>
+  </p>
+</section>
+
+<footer class="logout">
+  <%= link_to "Logout", logout_path, method: :delete %>
+</footer>
