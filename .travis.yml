@@ -1,0 +1,11 @@
+language: ruby
+rbenv:
+- 1.1.2
+addons:
+  postgresql: 9.6
+script:
+- bundle exec rails db:{create,migrate} RAILS_ENV=test
+- bundle exec rspec
+repo: Love-Rangers/couplistic_frontend
+branch: main
+skip_cleanup: 'true'
