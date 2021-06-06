@@ -1,2 +1,10 @@
 <h1>Hi <%= @user.display_name %>!!</h1>
+<section>
+  <h2>♥️Listen to these Songs tonight with your partner♥️</h2>
+  <% @songs_n_artists.each do |song| %>
+    <p>
+      <%= song[0] %> By: <% song[1].each do |artist| %> <%= artist %> <% end %>
+    </p>
+  <% end %>
+</section>
 <%= link_to "Logout", logout_path, method: :delete %>
