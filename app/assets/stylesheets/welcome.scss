@@ -24,6 +24,19 @@ body, html {
   background-size: cover;
 }
 
+.bg2 {
+  /* The image used */
+  background-image: url("moon");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @font-face {
  font-family: 'Gooddog';
  src: url('gooddog-plain-regular.ttf');
