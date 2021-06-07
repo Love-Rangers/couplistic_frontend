@@ -4,6 +4,6 @@ RSpec.describe "Spotify OAuth2 process" do
   it "happy path: allows user to login" do
     visit root_url
 
-    click_on "Login with Spotify"
+    find(:css, 'img[src*="connectwithspotify"]').click
   end
 end
