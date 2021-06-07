@@ -5,9 +5,8 @@ body, html {
 
 .center {
   margin: auto;
-  width: 30%;
+  width: 50%;
   text-align: center;
-  padding-top: 10px;
   padding-right: 50px;
   padding-left: 50px;
   padding-bottom: 50px;
@@ -23,4 +22,30 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@font-face {
+ font-family: 'Gooddog';
+ src: url('gooddog-plain-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Monallesia';
+  src: url('monallesia-script-regular.ttf');
+}
+
+h1.pretty {
+  font-family: 'Monallesia';
+  padding-right: 90px;
+}
+
+h2.pretty {
+  font-family: 'Gooddog';
+  padding-top: 20px;
+  padding-right: 65px;
+  padding-bottom: 20px;
+}
+
+.style_image {
+  padding-right: 50px;
 }
