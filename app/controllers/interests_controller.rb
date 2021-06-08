@@ -1,6 +1,6 @@
 class InterestsController < ApplicationController
   def index show
-    @interests = DashboardFacade.starred_Events(current_user.id)
-    @excursions = DashboardFacade.user_excursions(current_user.id)
+    @interests = DashboardFacade.starred_interest(current_user.id)
+    @events = DashboardFacade.user_events(current_user.id)
   end
 end
