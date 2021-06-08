@@ -15,7 +15,11 @@
       <div class="carousel-inner">
         <div class="item active">
           <section>
-            <h2 class="bussin">♥️Listen to these Songs tonight with your partner♥️</h2>
+            <h2 class="bussin">
+              <span style="color:pink">♥️</span>
+              <span style="color:white">Love Songs of the Day</span>
+              <span style="color:pink">♥️</span>
+            </h2>
             <% @songs_n_artists.each do |song| %>
               <p class="bussin">
                 <%= song[0] %> By: <% song[1].each do |artist| %> <%= artist %> <% end %>
@@ -29,6 +33,30 @@
             <p>
               The Next Full Moon is <%= @next_full_moon %>
             </p>
+          </section>
+        </div>
+        <div class="item">
+          <h2 class="bussin">
+            <span style="color:pink">♥️</span>
+            <span style="color:white">Search Event Tickets</span>
+            <span style="color:pink">♥️</span> 
+          </h2>
+          <section class="create-event">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </section>
         </div>
       </div>
