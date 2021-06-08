@@ -7,7 +7,8 @@ ruby '2.5.3'
 #r-stemmle
 gem 'figaro'
 gem 'faraday'
-gem 'rspotify'
+# gem 'rspotify'
+gem 'omniauth-google-oauth2'
 gem "simple_calendar", "~> 2.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
