@@ -8,6 +8,7 @@ ruby '2.5.3'
 gem 'figaro'
 gem 'faraday'
 gem 'rspotify'
+gem "simple_calendar", "~> 2.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
@@ -47,6 +48,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'travis'
 end
 
 group :development do
@@ -64,6 +66,7 @@ group :test do
     gem 'shoulda-matchers', '~> 4.0'
     gem 'vcr'
     gem 'capybara'
+    gem 'simplecov'
 end
 
 

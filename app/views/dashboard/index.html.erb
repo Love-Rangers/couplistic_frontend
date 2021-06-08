@@ -17,6 +17,12 @@
   <% end %>
 </section>
 
+<section class="calender">
+  <%= month_calendar do |date| %>
+    <%= date %>
+  <% end %>
+</section>
+
 <footer class="logout">
   <%= link_to "Logout", logout_path, method: :delete %>
 </footer>
@@ -37,3 +43,4 @@
   <%= f.text_field :keyword %><br /><br />
   <%= f.submit 'Find' %>
 <% end %>
+
