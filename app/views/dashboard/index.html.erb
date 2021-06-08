@@ -22,5 +22,9 @@
 </footer>
 
 
-
-
+<h1>Weather?</h1>
+<%= form_with url: weather_path, method: 'get', local: true do |f|  %>
+  <%= f.label :q, 'City' %>
+  <%= f.text_field :q %><br /><br />
+  <%= f.submit 'Find' %>
+<% end %>

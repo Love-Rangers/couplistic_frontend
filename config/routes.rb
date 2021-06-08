@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resource :spotify, only: :new, controller: 'spotify'
   resources :sessions, only: :new
   delete '/logout', to: 'sessions#destroy', as: 'logout'
-
+  get '/weather', to: 'weather#show'
   #catch all for rogue uri's
   get '*pages', to: 'welcome#index'
 end
