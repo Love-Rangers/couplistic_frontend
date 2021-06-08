@@ -26,3 +26,21 @@
 <footer class="logout">
   <%= link_to "Logout", logout_path, method: :delete %>
 </footer>
+
+
+<h1>Weather?</h1>
+<%= form_with url: weather_path, method: 'get', local: true do |f|  %>
+  <%= f.label :q, 'City' %>
+  <%= f.text_field :q %><br /><br />
+  <%= f.submit 'Find' %>
+<% end %>
+
+<h1>Tickets?</h1>
+<%= form_with url: ticketmaster_path, method: 'get', local: true do |f|  %>
+  <%= f.label :city, 'City' %>
+  <%= f.text_field :city %><br><br>
+  <%= f.label :keyword, 'Any Keyword' %>
+  <%= f.text_field :keyword %><br /><br />
+  <%= f.submit 'Find' %>
+<% end %>
+
