@@ -1,6 +1,9 @@
 class SpotifyUserFacade
   def self.request_name_and_password(access_token)
-    response = Faraday.get('https://api.spotify.com/v1/me', nil, { "Authorization" => "Bearer #{access_token}" } )
+    response = Faraday.get('https://api.spotify.com/v1/me') do |f|
+      f.headers["Authorization"] = "Bearer #{access_token}"
+    end
+
     user_spotify_info = JSON.parse(response.body, symbolize_names: true)
     #set the user and render dashboard/index
     @user = User.where(
