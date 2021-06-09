@@ -69,6 +69,7 @@ group :test do
     gem 'shoulda-matchers', '~> 4.0'
     gem 'vcr'
     gem 'capybara'
+    gem 'simplecov'
 end
 
 
