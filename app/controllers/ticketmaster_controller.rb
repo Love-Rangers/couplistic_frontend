@@ -7,7 +7,6 @@ class TicketmasterController < ApplicationController
 
     json = JSON.parse(response.body, symbolize_names: true)
 
-    @events = json[:data]
-    # redirect_to ticketmaster_path
+    @tix_events = json[:data]
   end
 end
