@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v1.4.2
       Authorization:
-      - Basic Og==
+      - Basic MTczNDBiOTJjOTdiNDc3NmFhZDkyZjIyZThhMmUyZjY6YjE2NzlhMzE0YTY4NGJjYmI5OWQzNDVlYTNmMWMzOGE=
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -23,28 +23,31 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Wed, 09 Jun 2021 20:58:29 GMT
+      - Wed, 09 Jun 2021 21:06:58 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '26'
       Set-Cookie:
-      - __HOST-sp_fid=d014a8aa-5c30-43bc-84c0-8239b5c0d6d3;Version=1;Path=/;Secure;HttpOnly;SameSite=None
-      - __Host-device_id=AQDJA-7LKCTnLfmbKMlpCsS2VQ7fYoBLUFqpnOgbm_oQB4tmd1gVepiuXDSV2QqKhRtDsVG_Mpc0if0VIWNeJQHt1mUvfWwN_1g;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+      - __HOST-sp_fid=6fb8a06c-ba49-4b56-832f-e60d1c7f92b4;Version=1;Path=/;Secure;HttpOnly;SameSite=None
+      - __Host-device_id=AQBvemqB-08MF5AwzxR057iqUSFvVQTsB_y4ioTAgjk7v6wZoQsNmDNe5bx5_3SZRD4GTcOhXvq1uUaLrWtQD0w5jxSXMzJmj4I;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
       Sp-Trace-Id:
-      - 6564ef3802be1fed
+      - 1c143d10fd39f508
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
       - nosniff
+      Vary:
+      - Accept-Encoding
       Server:
       - envoy
       Via:
       - HTTP/2 edgeproxy, 1.1 google
       Alt-Svc:
       - clear
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
-      string: '{"error":"invalid_client"}'
-  recorded_at: Wed, 09 Jun 2021 20:58:29 GMT
+      encoding: ASCII-8BIT
+      string: '{"error":"invalid_grant","error_description":"Invalid authorization
+        code"}'
+  recorded_at: Wed, 09 Jun 2021 21:06:58 GMT
 recorded_with: VCR 6.0.0
