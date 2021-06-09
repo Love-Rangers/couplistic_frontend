@@ -2,7 +2,7 @@
 
 <div class="bg2">
   <div class="container1">
-    <h1>Hi <%= @user.display_name %>!</h1>
+    <h1>Hi <%= current_user.display_name %>!</h1>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators --
       <!--
@@ -32,6 +32,12 @@
               <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             <p>
               The Next Full Moon is <%= @next_full_moon %>
+              <div class="moon__image" style="background-image: url(assets/images/waningCrescent);"></div>
+              <div className='column column__moon'>
+                        <MoonCard
+                          moonPhase={this.state.moonPhase}
+
+                        </MoonCard>
             </p>
           </section>
         </div>
@@ -82,7 +88,7 @@
 <%= form_with url: weather_path, method: 'get', local: true do |f|  %>
   <%= f.label :q, 'City' %>
   <%= f.text_field :q %><br /><br />
-  <%= f.submit 'Find' %>
+  <%= f.submit 'Search Weather' %>
 <% end %>
 
 
@@ -114,4 +120,3 @@
   <%= f.text_field :keyword %><br /><br />
   <%= f.submit 'Find' %>
 <% end %>
-

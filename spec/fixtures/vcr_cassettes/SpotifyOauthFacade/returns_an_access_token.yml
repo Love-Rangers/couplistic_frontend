@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v1.4.2
       Authorization:
-      - Basic OTljYWI1MTM1ZjI0NDRjNjlhOGNhMDlmMWVjNGU2OGQ6NzkxZjVmMjU2MmM4NGJlMzhhYTJmNjg1NDJkNDE2ZTc=
+      - Basic MTczNDBiOTJjOTdiNDc3NmFhZDkyZjIyZThhMmUyZjY6YjE2NzlhMzE0YTY4NGJjYmI5OWQzNDVlYTNmMWMzOGE=
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -23,14 +23,14 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Mon, 07 Jun 2021 14:21:59 GMT
+      - Wed, 09 Jun 2021 21:06:58 GMT
       Content-Type:
       - application/json
       Set-Cookie:
-      - __HOST-sp_fid=87323420-63c4-4948-b68e-92812b282132;Version=1;Path=/;Secure;HttpOnly;SameSite=None
-      - __Host-device_id=AQAMcuYZP6KNJuGPpJA5p-lGf4JCTeHOJPGvK6ju-ne1r2IV80iXGkXEh46u-XYTfgUxSao5Nt8mX1-I7vOAHgyD2g0XuJcWzhw;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+      - __HOST-sp_fid=6fb8a06c-ba49-4b56-832f-e60d1c7f92b4;Version=1;Path=/;Secure;HttpOnly;SameSite=None
+      - __Host-device_id=AQBvemqB-08MF5AwzxR057iqUSFvVQTsB_y4ioTAgjk7v6wZoQsNmDNe5bx5_3SZRD4GTcOhXvq1uUaLrWtQD0w5jxSXMzJmj4I;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
       Sp-Trace-Id:
-      - 52323426c5230a2c
+      - 1c143d10fd39f508
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
@@ -49,5 +49,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"error":"invalid_grant","error_description":"Invalid authorization
         code"}'
-  recorded_at: Mon, 07 Jun 2021 14:21:58 GMT
+  recorded_at: Wed, 09 Jun 2021 21:06:58 GMT
 recorded_with: VCR 6.0.0
