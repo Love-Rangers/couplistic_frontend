@@ -14,20 +14,22 @@ RSpec.describe 'Welcome Page' do
       visit root_path
 
       find(:css, 'img[src*="connectwithspotify"]').click
-      expect(page).to have_content('You must login with Spotify first')
       expect(current_path).to eq('/')
     end
   end
 
   describe 'happy path - valid credentials' do
     it 'redirects to dashboard' do
-      user = User.create!(display_name: 'Lover-Ranger', email:'lover@gmail.com')
-
       visit root_path
 
-      find(:css, 'img[src*="connectwithspotify"]').click
-      expect(current_path).to eq(lovers_path)
-      expect(page).to have_content("Welcome #{user.display_name}")
+      @user = User.create!(display_name: 'ranger', email:'email@gmail.com' )
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
+      visit lovers_path
+
+      # find(:css, 'img[src*="connectwithspotify"]').click
+      # expect(current_path).to eq('/')
+      expect(page).to have_content(@user.display_name)
       # save_and_open_page
     end
   end

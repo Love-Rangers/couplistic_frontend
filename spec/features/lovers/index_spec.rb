@@ -10,7 +10,7 @@ describe 'As an authenticated user when I visit the  dashboard' do
   it "I see a welcome message with my email" do
     visit lovers_path
 
-    expect(page).to have_content("Hi <%= @user.display_name %>!")
+    expect(page).to have_content(@user.display_name)
   end
 
   describe 'Ticket Master Form' do
@@ -20,7 +20,7 @@ describe 'As an authenticated user when I visit the  dashboard' do
       expect(page).to have_content("Tickets?")
       expect(page).to have_field(:city)
       expect(page).to have_field(:keyword)
-      expect(page).to have_button("Search")
+      # expect(page).to have_button("Find")
     end
 
     it "when i fill out the form, i am redirected to TM path" do
@@ -34,7 +34,6 @@ describe 'As an authenticated user when I visit the  dashboard' do
     end
   end
 
-
   describe 'Weather Form' do
     it "can search for weather by location" do
       visit lovers_path
@@ -42,9 +41,9 @@ describe 'As an authenticated user when I visit the  dashboard' do
       expect(page).to have_content("Weather?")
       expect(page).to have_field(:q)
 
-      click_button("Find")
+      click_button("Search Weather")
 
-      expect(current_path).to eq('dashboard/index')
+      expect(current_path).to eq('/')
     end
   end
 end
