@@ -7,7 +7,7 @@ class LoversController < ApplicationController
       redirect_to root_url
     else
       @songs_n_artists = SpotifyGemFacade.get_recommendations
-
+      
       render 'dashboard/index'
     end
   end
