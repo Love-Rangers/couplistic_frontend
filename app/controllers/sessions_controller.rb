@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def new
     #We have received an access_code, which we will now exchange for an access_token and refresh token
     access_token = SpotifyOauthFacade.exchange_access_code(params["code"])

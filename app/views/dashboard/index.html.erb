@@ -85,6 +85,27 @@
   <%= f.submit 'Find' %>
 <% end %>
 
+
+<section class="event-form">
+  <%= form_with url: '/events', method: :post do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <%= f.label :start_time %>
+    <%= f.datetime_local_field :start_time %>
+
+    <%= f.submit %><span class="notice"><%= flash[:notice] %></span>
+
+  <% end %>
+</section>
+
+<footer class="logout">
+  <%= link_to "Logout", logout_path, method: :delete %>
+</footer>
+
 <h1>Tickets?</h1>
 <%= form_with url: ticketmaster_path, method: 'get', local: true do |f|  %>
   <%= f.label :city, 'City' %>
@@ -93,3 +114,4 @@
   <%= f.text_field :keyword %><br /><br />
   <%= f.submit 'Find' %>
 <% end %>
+

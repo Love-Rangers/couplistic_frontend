@@ -10,7 +10,7 @@ class LoversController < ApplicationController
       # @events = CouplisticFacade.get_events(@user.id)
       # @next_full_moon = Time.at(CouplisticFacade.get_weather_windows).strftime("%A, %b %e")
       @songs_n_artists = SpotifyGemFacade.get_recommendations
-
+      
       render 'dashboard/index'
     end
   end
