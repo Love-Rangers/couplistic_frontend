@@ -2,9 +2,9 @@ class LoversController < ApplicationController
 
   def index
     @user = User.find_by(id: session[:user_id])
-    if @user.nil?
-      redirect_to root_url, alert: "You must login with Spotify first"
-    else
+    # if @user.nil?
+    #   redirect_to root_url, alert: "You must login with Spotify first"
+    # else
     #theoretical mvp display items
       # @weather_windows = CouplisticFacade.get_weather_windows(@user.id)
       # @events = CouplisticFacade.get_events(@user.id)
@@ -12,6 +12,6 @@ class LoversController < ApplicationController
       @songs_n_artists = SpotifyGemFacade.get_recommendations
 
       render 'dashboard/index'
-    end
+    # end
   end
 end
