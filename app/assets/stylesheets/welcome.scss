@@ -53,6 +53,20 @@ body, html {
   margin-top: -20px;
 }
 
+.bg4 {
+  /* The image used */
+  background-image: url("weather.jpeg");
+
+  /* Full height */
+  height: 72%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -20px;
+}
+
 @font-face {
  font-family: 'Gooddog';
  src: url('gooddog-plain-regular.ttf');
