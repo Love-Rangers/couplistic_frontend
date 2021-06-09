@@ -49,7 +49,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'travis'
-  gem 'pry-remote'
+  # gem 'pry-remote'
 end
 
 group :development do
