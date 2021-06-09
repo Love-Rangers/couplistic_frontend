@@ -5,9 +5,8 @@ body, html {
 
 .center {
   margin: auto;
-  width: 30%;
+  width: 50%;
   text-align: center;
-  padding-top: 10px;
   padding-right: 50px;
   padding-left: 50px;
   padding-bottom: 50px;
@@ -23,4 +22,94 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: -20px;
+}
+
+.bg2 {
+  /* The image used */
+  background-image: url("moon");
+
+  /* Full height */
+  height: 120%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -20px;
+}
+
+@font-face {
+ font-family: 'Gooddog';
+ src: url('gooddog-plain-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Monallesia';
+  src: url('monallesia-script-regular.ttf');
+}
+
+h1.pretty {
+  font-family: 'Monallesia';
+  padding-right: 90px;
+}
+
+h2.pretty {
+  font-family: 'Gooddog';
+  padding-top: 20px;
+  padding-right: 65px;
+  padding-bottom: 20px;
+}
+
+h2.bussin {
+  text-align: center;
+  font-size: 80px
+}
+
+p.bussin {
+  text-align: center;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  font-size: 25px;
+  color: red;
+  text-shadow: 2px 2px 5px black;
+}
+
+.style_image {
+  padding-right: 50px;
+}
+
+.container1 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.carousel-header {
+  display: flex;
+  justify-content: center;
+}
+.carousel-header h2 {
+  position: relative;
+  bottom: 60px;
+}
+
+.create-event {
+  padding-top: 75px;
+  padding-left: 275px;
+  padding-right: 275px;
+  color: white;
+}
+.carousel-inner img{  width: 100%;}
+.carousel {  height: 450px;}
+.carousel-inner {  height: 450px;}
+
+.simple-calendar {
+  padding-top: 75px;
+  padding-left: 95px;
+  padding-right: 95px;
+  .calendar-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px
+  }
 }
