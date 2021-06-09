@@ -1,9 +1,15 @@
-<h1>Ideas for our dates:</h1>
-
-<% @events.each do |event| %>
-  <h2><%= event[:attributes][:event_name] %><br></h2>
-  <a href="<%= "#{event[:attributes][:url]}" %>">Buy tickets here</a><br>
-  <%= image_tag(event[:attributes][:poster], border: 0, size: "400x200") %><br>
-   Start time: <%=event[:attributes][:start_time] %><br>
-   Venue: <%=event[:attributes][:venue] %><br><br>
-<% end %>
+<div class="bg3">
+  <h2 class="cool" style="padding: 20px">Date Ideas</h2>
+  <div class="cards-row">
+    <% @events.each do |event| %>
+      <div class="card col-sm-6" style="width: 22rem;">
+        <%= image_tag(event[:attributes][:poster], border: 0, size: "400x100", class: "card-img-top") %>
+        <div class="card-body">
+          <h5 class="card-title"><%= event[:attributes][:event_name] %></h5>
+          <p class="card-text">Start time: <%= event[:attributes][:start_time] %></p>
+          <a href="<%= event[:attributes][:url] %> class="btn btn-primary"> Buy Tickets</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
