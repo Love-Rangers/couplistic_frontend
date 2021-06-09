@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'As an authenticated user when I visit the  dashboard' do
   before :each do
-    user = User.create!(display_name: 'brisagg', email:'brisagarciaglz@gmail.com' )
+    @user = User.create!(display_name: 'ranger', email:'email@gmail.com' )
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
   end

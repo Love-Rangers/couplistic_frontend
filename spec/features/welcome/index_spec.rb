@@ -26,7 +26,7 @@ RSpec.describe 'Welcome Page' do
       visit root_path
 
       find(:css, 'img[src*="connectwithspotify"]').click
-      expect(current_path).to eq(dashboard_index_path)
+      expect(current_path).to eq(lovers_path)
       expect(page).to have_content("Welcome #{user.display_name}")
       # save_and_open_page
     end
