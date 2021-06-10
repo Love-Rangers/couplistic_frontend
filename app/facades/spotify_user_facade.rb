@@ -5,7 +5,7 @@ class SpotifyUserFacade
     end
 
     user_spotify_info = JSON.parse(response.body, symbolize_names: true)
-    #set the user and render dashboard/index
+    
     @user = User.where(
       display_name: user_spotify_info[:display_name],
       email: user_spotify_info[:email]

@@ -7,6 +7,7 @@ class Weather
               :next_full_moon,
               :next_3_days_forecast,
               :next_3_days_icons
+
   def initialize(weather_data)
     @next_full_moon           = next_full_moon_date(weather_data[:next_full_moon])
     @sunrise                  = weather_data[:sunrise_time]

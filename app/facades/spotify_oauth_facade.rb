@@ -11,7 +11,7 @@ class SpotifyOauthFacade
       headers = { Authorization: "Basic #{Base64.strict_encode64("#{ENV['client_id']}:#{ENV['client_secret']}")}" }
     )
     body = JSON.parse(response.body, symbolize_names: true)
-    
+
     body[:access_token]
   end
 end
