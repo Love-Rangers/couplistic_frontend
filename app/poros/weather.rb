@@ -18,13 +18,16 @@ class Weather
     @next_3_days_forecast     = weather_data[:forecast_condition]
     @next_3_days_icons        = weather_data[:forecast_icon]
   end
+
   def next_full_moon_date(epoch_time)
     Time.at(epoch_time)
     .strftime("%m/%d/%Y at %I:%M%p")
   end
+
   def two_days_from_today
     1.days.from_now.strftime("%A")
   end
+
   def three_days_from_today
     2.days.from_now.strftime("%A")
   end
