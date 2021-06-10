@@ -1,6 +1,6 @@
 class CouplisticService
   def self.find_events_by_user_id(user_id)
-    conn = Faraday.new('http://localhost:3001')
+    conn = Faraday.new("https://couplistic-be.herokuapp.com/")
 
     response = conn.get(
       "/api/v1/events?user_id=#{user_id}"
