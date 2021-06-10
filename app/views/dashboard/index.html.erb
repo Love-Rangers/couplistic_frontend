@@ -71,8 +71,15 @@
   </div>
 
   <section class="calender">
-    <%= month_calendar do |date| %>
-      <%= date.day %>
+    <%= month_calendar(events: @events) do |date, goals| %>
+      <%= date%>
+
+      <% goals.each do |goal| %>
+        <div>
+          <%= goal.name %><br>
+          <%= goal.location %>
+        </div>
+      <% end %>
     <% end %>
   </section>
 </div>
@@ -114,4 +121,3 @@
   <%= f.text_field :keyword %><br /><br />
   <%= f.submit 'Find' %>
 <% end %>
-
