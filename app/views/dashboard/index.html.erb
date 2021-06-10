@@ -7,116 +7,92 @@
       <!-- Indicators --
       <!--
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol> -->
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <section>
-            <h2 class="bussin">
-              <span style="color:pink">♥️</span>
-              <span style="color:white">Love Songs of the Day</span>
-              <span style="color:pink">♥️</span>
-            </h2>
-            <% @songs_n_artists.each do |song| %>
-              <p class="bussin">
-                <%= song[0] %> By: <% song[1].each do |artist| %> <%= artist %> <% end %>
-              </p>
-            <% end %>
-          </section>
-        </div>
-        <div class="item">
-          <section class="weather-window">
-              <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            <p>
-              The Next Full Moon is <%= @next_full_moon %>
-              <div class="moon__image" style="background-image: url(assets/images/waningCrescent);"></div>
-              <div className='column column__moon'>
-                        <MoonCard
-                          moonPhase={this.state.moonPhase}
-
-                        </MoonCard>
-            </p>
-          </section>
-        </div>
-        <div class="item">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol> -->
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <section>
           <h2 class="bussin">
             <span style="color:pink">♥️</span>
-            <span style="color:white">Search Event Tickets</span>
+            <span style="color:white">Love Songs of the Day</span>
             <span style="color:pink">♥️</span>
           </h2>
-          <section class="create-event">
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <% @songs_n_artists.each do |song| %>
+          <p class="bussin">
+            <%= song[0] %> By: <% song[1].each do |artist| %> <%= artist %> <% end %>
+          </p>
+          <% end %>
+        </section>
+      </div>
+      <div class="item">
+        <section class="weather-window">
+          <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <p>
+            The Next Full Moon is <%= @next_full_moon %>
+          </p>
+        </section>
+      </div>
+      <div class="item">
+        <h2 class="bussin">
+          <span style="color:pink">♥️</span>
+          <span style="color:white">Current Weather</span>
+          <span style="color:pink">♥️</span>
+        </h2>
+        <div id="landing-search-input">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <%= form_with url: weather_path, local: true, method: :get, html: { class: "form-inline" } do |form| %>
+              <div class="row form-group">
+                <div class="col-sm-8">
+                  <%= form.text_field :q, placeholder: "City", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %>
+                  <br>
+                  <%= form.button "Get Current Weather", class: "btn btn-outline-success form-control" %>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </section>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="sr-only">Previous</span>
-      </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="sr-only">Next</span>
-    </a>
+      <div class="item">
+        <h2 class="bussin">
+          <span style="color:pink">♥️</span>
+          <span style="color:white">Search Event Tickets</span>
+          <span style="color:pink">♥️</span>
+        </h2>
+        <div id="landing-search-input">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <%= form_with url: ticketmaster_path, local: true, method: :get, html: { class: "form-inline" } do |form| %>
+              <div class="row form-group">
+                <div class="col-sm-8">
+                  <%= form.text_field :city, placeholder: "City", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %>
+                  <%= form.text_field :keyword, placeholder: "Keyword", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %>
+                  <br>
+                  <%= form.button "Search", class: "btn btn-outline-success form-control" %>
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <section class="calender">
-    <%= month_calendar do |date| %>
+    <section class="calender">
+      <%= month_calendar do |date| %>
       <%= date.day %>
-    <% end %>
-  </section>
-</div>
-
-
-<h1>Weather?</h1>
-<%= form_with url: weather_path, method: 'get', local: true do |f|  %>
-  <%= f.label :q, 'City' %>
-  <%= f.text_field :q %><br /><br />
-  <%= f.submit 'Search Weather' %>
-<% end %>
-
-
-<section class="event-form">
-  <%= form_with url: '/events', method: :post do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-
-    <%= f.label :start_time %>
-    <%= f.datetime_local_field :start_time %>
-
-    <%= f.submit %><span class="notice"><%= flash[:notice] %></span>
-
-  <% end %>
-</section>
-
-<footer class="logout">
-  <%= link_to "Logout", logout_path, method: :delete %>
-</footer>
-
-<h1>Tickets?</h1>
-<%= form_with url: ticketmaster_path, method: 'get', local: true do |f|  %>
-  <%= f.label :city, 'City' %>
-  <%= f.text_field :city %><br><br>
-  <%= f.label :keyword, 'Any Keyword' %>
-  <%= f.text_field :keyword %><br /><br />
-  <%= f.submit 'Find' %>
-<% end %>
+      <% end %>
+    </section>
+  </div>
