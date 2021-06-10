@@ -10,6 +10,7 @@ class CouplisticFacade
 
   def self.get_weather_windows(city)
     body = CouplisticService.get_weather_windows_db(city)
-    Weather.new(body)
+    
+    Weather.new(body[:data][:attributes])
   end
 end

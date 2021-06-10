@@ -15,6 +15,8 @@ class CouplisticService
     response = conn.get(
       "/api/v1/weather?q=#{city}"
     )
+    
+    json_parse(response)
   end
 
   private
