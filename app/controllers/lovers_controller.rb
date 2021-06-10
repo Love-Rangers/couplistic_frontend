@@ -12,7 +12,7 @@ class LoversController < ApplicationController
       else
         @weather_windows = CouplisticFacade.get_weather_windows("Paris")
       end
+
       render 'dashboard/index'
-    end
   end
 end

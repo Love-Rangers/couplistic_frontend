@@ -1,9 +1,0 @@
-<h1>Ideas for our dates:</h1>
-
-<% @tix_events.each do |event| %>
-  <h2><%= event[:attributes][:event_name] %><br></h2>
-  <a href="<%= "#{event[:attributes][:url]}" %>">Buy tickets here</a><br>
-  <%= image_tag(event[:attributes][:poster], border: 0, size: "400x200") %><br>
-   Start time: <%=event[:attributes][:start_time] %><br>
-   Venue: <%=event[:attributes][:venue] %><br><br>
-<% end %>

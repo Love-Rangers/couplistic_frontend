@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>CouplisticFrontend</title>
+    <script src="https://use.fontawesome.com/5d646b8efd.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,10 +12,14 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= link_to "Logout", logout_path, method: :delete %>
+  <% end %>
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
-    
+
     <%= yield %>
+    <%= render 'application/footer' %>
   </body>
 </html>
