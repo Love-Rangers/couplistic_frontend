@@ -16,7 +16,7 @@ RSpec.describe 'ticket master service' do
           }).
         to_return(status: 200, body: fixture_json, headers: {})
 
-    json = TicketMasterService.event_search_db(keyword_query, city_query)
+    json = TicketMasterService.get_ticket_info(keyword_query, city_query)
 
     expect(json).to be_an(Array)
 
