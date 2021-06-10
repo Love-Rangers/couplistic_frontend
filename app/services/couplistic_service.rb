@@ -5,6 +5,11 @@ class CouplisticService
     response = conn.get(
       "/api/v1/events?user_id=#{user_id}"
     )
-    body = JSON.parse(response.body, symbolize_names: true)
-end
+
+    if response.body.empty?
+      return Array.new
+    else
+      body = JSON.parse(response.body, symbolize_names: true)
+    end
+  end
 end

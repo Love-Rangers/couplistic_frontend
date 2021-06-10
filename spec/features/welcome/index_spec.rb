@@ -19,7 +19,7 @@ RSpec.describe 'Welcome Page' do
   end
 
   describe 'happy path - valid credentials' do
-    it 'redirects to dashboard' do
+    it 'redirects to dashboard', :vcr do
       visit root_path
 
       @user = User.create!(display_name: 'ranger', email:'email@gmail.com' )
@@ -27,10 +27,7 @@ RSpec.describe 'Welcome Page' do
 
       visit lovers_path
 
-      # find(:css, 'img[src*="connectwithspotify"]').click
-      # expect(current_path).to eq('/')
       expect(page).to have_content(@user.display_name)
-      # save_and_open_page
     end
   end
 end

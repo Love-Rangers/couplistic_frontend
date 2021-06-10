@@ -12,7 +12,11 @@ class TicketMasterService
     end
 
     def parse_data(response)
-      JSON.parse(response.body, symbolize_names: true)
+      if response.body.empty?
+        return Hash.new
+      else
+        JSON.parse(response.body, symbolize_names: true)
+      end
     end
   end
 end
