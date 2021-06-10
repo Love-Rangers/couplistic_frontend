@@ -39,6 +39,10 @@ body, html {
   margin-top: -20px;
 }
 
+.container-left {
+  float: left;
+}
+
 .bg3 {
   /* The image used */
   background-image: url("cheering_crowd.jpeg");
@@ -92,6 +96,15 @@ h2.pretty {
 h2.bussin {
   text-align: center;
   font-size: 80px
+}
+
+h2.bussin-left {
+  padding-left: 75px;
+  font-size: 80px;
+}
+
+.container-left {
+  padding-left: 25px
 }
 
 h2.cool {
@@ -249,4 +262,8 @@ footer .quick-links {
 .fa-ellipsis-h {
   color: white;
   padding: 2rem 0;
+}
+
+.card-group {
+  background-color: transparent;
 }
