@@ -6,7 +6,7 @@ class SpotifyOauthFacade
       {
         'grant_type' => "authorization_code",
         'code' => code,
-        'redirect_uri' => 'http://localhost:3000/sessions/new'
+        'redirect_uri' => 'https://couplistic-fe.herokuapp.com/sessions/new'
       },
       headers = { Authorization: "Basic #{Base64.strict_encode64("#{ENV['client_id']}:#{ENV['client_secret']}")}" }
     )
