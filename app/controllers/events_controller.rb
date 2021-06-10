@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def create
-    conn = Faraday.new(url: "https://couplistic-be.herokuapp.com/")
+    conn = Faraday.new(url: "https://couplistic-be.herokuapp.com")
     response = conn.post('/api/v1/events') do |f|
       f.body = {
         location: params[:location],
@@ -13,6 +13,6 @@ class EventsController < ApplicationController
 
     flash[:notice] = 'Event Saved' if response.status == 200
 
-    redirect_to lovers_url
+    redirect_to lovers_path
   end
 end
