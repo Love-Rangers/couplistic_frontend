@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://couplistic-be.herokuapp.com/api/v1/events?user_id=109
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 10 Jun 2021 19:13:12 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - 843e5fb8-588a-4b4c-9862-1e6cc4f72724
+      X-Runtime:
+      - '0.007311'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 10 Jun 2021 19:13:12 GMT
+recorded_with: VCR 6.0.0
