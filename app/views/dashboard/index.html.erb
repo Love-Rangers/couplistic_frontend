@@ -2,28 +2,22 @@
 
 <div class="bg2">
   <div class="container1">
-    <h1>Hi <%= current_user.display_name %>!</h1>
+    <p class="fancay">hi <%= current_user.display_name %>!</p>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators --
-      <!--
-      <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol> -->
-    <!-- Wrapper for slides -->
+
     <div class="carousel-inner">
       <div class="item active">
         <section>
           <h2 class="bussin">
             <span style="color:pink">♥️</span>
-            <span style="color:white">Love Songs of the Day</span>
+            <span style="color:#F3D6E1">Love Songs of the Day</span>
             <span style="color:pink">♥️</span>
           </h2>
           <% @songs_n_artists.each do |song| %>
           <p class="bussin">
-            <%= song[0] %> By: <% song[1].each do |artist| %> <%= artist %> <% end %>
-          </p>
+            <span style="color:#900C3F ">
+                        <%= song[0] %></span> <span style="color:#DF1F69 "> By: <% song[1].each do |artist| %> <%= artist %> <% end %>
+                        </span></p>
           <% end %>
         </section>
       </div>
@@ -41,15 +35,17 @@
           <span style="color:white">Current Weather</span>
           <span style="color:pink">♥️</span>
         </h2>
+        <div class="d-flex justify-content-sm-center">
         <div id="landing-search-input">
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
               <%= form_with url: weather_path, local: true, method: :get, html: { class: "form-inline" } do |form| %>
               <div class="row form-group">
                 <div class="col-sm-8">
-                  <%= form.text_field :q, placeholder: "City", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %>
+                  <%= form.text_field :q, placeholder: "City", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %></div>
+                  <div class="d-flex justify-content-sm-center">
                   <br>
-                  <%= form.button "Get Current Weather", class: "btn btn-outline-success form-control" %>
+                  <%= form.button "Is It Sunny?", class: "btn btn-outline-success form-control" %></div>
                 </div>
               </div>
               <% end %>
@@ -63,6 +59,7 @@
           <span style="color:white">Search Event Tickets</span>
           <span style="color:pink">♥️</span>
         </h2>
+        <div class="d-flex justify-content-sm-center">
         <div id="landing-search-input">
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -70,9 +67,9 @@
               <div class="row form-group">
                 <div class="col-sm-8">
                   <%= form.text_field :city, placeholder: "City", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %>
-                  <%= form.text_field :keyword, placeholder: "Keyword", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %>
-                  <br>
-                  <%= form.button "Search", class: "btn btn-outline-success form-control" %>
+                  <%= form.text_field :keyword, placeholder: "Keyword", size: 40, data: { behavior: "autocomplete" }, class: "form-control" %></div>
+                  <br><div class="d-flex justify-content-sm-center">
+                  <%= form.button "Search", class: "btn btn-outline-success form-control" %></div>
                 </div>
               </div>
               <% end %>
@@ -97,7 +94,7 @@
         <%= f.text_field :name %>
 
         <%= f.label :location %>
-        <%= f.text_field :location %>
+        <%= f.text_field :location %><br>
 
         <%= f.label :start_time %>
         <%= f.datetime_local_field :start_time %>
