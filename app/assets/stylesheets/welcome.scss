@@ -3,6 +3,25 @@ body, html {
   margin: 0;
 }
 
+p.fancay {
+  font-family: 'Gill Sans';
+  font-size: 23px;
+  color: #F1A5C2
+}
+
+p.logo {
+  font-family: 'Gill Sans';
+  font-weight: bold;
+  font-size: 23px;
+  color: #651231
+}
+
+p.logout {
+  font-family: 'Gill Sans';
+  font-size: 23px;
+  color: #651231
+}
+
 .center {
   margin: auto;
   width: 50%;
@@ -90,6 +109,7 @@ h2.pretty {
 }
 
 h2.bussin {
+  font-family: 'Snell Roundhand';
   text-align: center;
   font-size: 80px
 }
@@ -101,13 +121,13 @@ h2.cool {
 }
 
 p.bussin {
+  font-family: 'Apple Chancery';
   text-align: center;
   font-weight: bold;
-  text-decoration-line: underline;
   text-decoration-style: solid;
-  font-size: 25px;
+  font-size: 28px;
   color: red;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 2px 2px 5px #F3D6E1;
 }
 
 .style_image {
