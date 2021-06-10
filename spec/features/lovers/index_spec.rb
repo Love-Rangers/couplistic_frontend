@@ -39,8 +39,11 @@ describe 'As an authenticated user when I visit the  dashboard' do
 
       expect(page).to have_content("Current Weather")
       expect(page).to have_field(:q)
-      fill_in :q, with: "Denver"
 
+      click_button("Is It Sunny?")
+      expect(page).to have_content("Sorry, currently no weather 😞")
+
+      fill_in :q, with: "Denver"
       click_button("Is It Sunny?")
       expect(current_path).to eq('/weather')
     end
