@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+<div class="bg4">
+  <h2 class="bussin" style="padding: 20px">Moon & Weather</h2>
+  <p> Moon Phase:     <%= @weather.moonphase     %> </p>
+  <p> Next Full Moon: <%=@weather.next_full_moon %> </p>
+
+  <p> Sunrise: <%= @weather.sunrise %> </p>
+  <p> Sunset: <%= @weather.sunset %> </p>
+  <p> Moonrise: <%= @weather.moonrise %> </p>
+  <p> Moonset: <%= @weather.moonset %> </p>
+
+  <h3> Next 3 Day Forecast: </h3>
+  <h5> Tomorrow:</h5>
+  <%= @weather.next_3_days_forecast[0] %>
+  
+  <h5> <%= @weather.two_days_from_today %>:</h5>
+  <%= @weather.next_3_days_forecast[1] %>
+
+  <h5> <%= @weather.three_days_from_today %>:</h5>
+  <%= @weather.next_3_days_forecast[2] %>
+
+
+</div>
+=======
+<%= Time.at(@weather[:next_full_moon]) %>
+Sunrise time: <%= @weather[:sunrise_time] %>
+Sunset time: <%= @weather[:sunset_time] %>
+>>>>>>> main
