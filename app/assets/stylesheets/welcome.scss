@@ -126,12 +126,22 @@ h2.event-creation {
 }
 
 h2.bussin-left {
-  padding-left: 75px;
+  text-align: left;
+  font-size: 80px;
+}
+
+h2.bussin-right {
+  text-align: right;
   font-size: 80px;
 }
 
 .container-left {
-  padding-left: 25px
+  padding-left: 250px
+}
+
+.container-right {
+  padding-left: 1300px;
+  padding-right: 250px;
 }
 
 h2.cool {

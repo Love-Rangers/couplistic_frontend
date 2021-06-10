@@ -37,43 +37,38 @@
       </div>
     </div>
 
-    <h2 class="bussin-left" style="padding: 20px">3 Day Forecast</h2>
-    <div class="container-left">
+    <h2 class="bussin-right">Today</h2>
+    <div class="container-right">
       <div class="card-group">
         <div class="card text-center" style="width: 12rem;">
           <div class="card-body">
             <h5 class="card-title">Sunrise</h5>
-            <%= image_tag(@weather.next_3_days_icons[0]) %>
-            <p class="card-text"><%= @weather.next_3_days_forecast[0] %></p>
+            <i class="fas fa-sun fa-4x"></i>
+            <p class="card-text"><%= @weather.sunrise %></p>
           </div>
         </div>
         <div class="card text-center" style="width: 12rem;">
           <div class="card-body">
             <h5 class="card-title">Sunset</h5>
-            <%= image_tag(@weather.next_3_days_icons[1]) %>
-            <p class="card-text"><%= @weather.next_3_days_forecast[1] %></p>
+            <i class="far fa-sun fa-4x"></i>
+            <p class="card-text"><%= @weather.sunset %></p>
           </div>
         </div>
         <div class="card text-center" style="width: 12rem;">
           <div class="card-body">
             <h5 class="card-title">Moonrise</h5>
-            <%= image_tag(@weather.next_3_days_icons[2]) %>
-            <p class="card-text"><%= @weather.next_3_days_forecast[2] %></p>
+            <i class="fas fa-moon fa-4x"></i>
+            <p class="card-text"><%= @weather.moonrise %></p>
           </div>
         </div>
         <div class="card text-center" style="width: 12rem;">
           <div class="card-body">
             <h5 class="card-title">Moonset</h5>
-            <%= image_tag(@weather.next_3_days_icons[2]) %>
-            <p class="card-text"><%= @weather.next_3_days_forecast[2] %></p>
+            <i class="far fa-moon fa-4x"></i>
+            <p class="card-text"><%= @weather.moonset %></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <p> Sunrise: <%= @weather.sunrise %> </p>
-  <p> Sunset: <%= @weather.sunset %> </p>
-  <p> Moonrise: <%= @weather.moonrise %> </p>
-  <p> Moonset: <%= @weather.moonset %> </p>
 </div>
