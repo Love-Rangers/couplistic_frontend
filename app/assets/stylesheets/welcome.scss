@@ -30,7 +30,7 @@ body, html {
   background-image: url("moon.jpeg");
 
   /* Full height */
-  height: 120%;
+  height: 135%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -102,6 +102,7 @@ h2.event-creation {
   text-align: center;
   font-size: 35px;
   font-weight: bold;
+  padding-top: 75px;
 }
 
 h2.bussin-left {
@@ -157,7 +158,7 @@ p.bussin {
 .carousel-inner {  height: 450px;}
 
 .simple-calendar {
-  padding-top: 75px;
+  padding-top: 25px;
   padding-left: 95px;
   padding-right: 95px;
   .calendar-heading {
