@@ -5,7 +5,7 @@ class CouplisticFacade
   end
 
   def self.get_weather_windows(city)
-    conn = Faraday.new('http://localhost:3001')
+    conn = Faraday.new("https://couplistic-be.herokuapp.com/")
 
     response = conn.get("/api/v1/weather?q=#{city}")
     body = JSON.parse(response.body, symbolize_names: true)
