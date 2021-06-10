@@ -2,7 +2,7 @@ class WeatherService
   class << self
     def get_three_day_forecast(location)
       response = conn.get("/api/v1/weather?q=#{location}")
-      if response.body.empty?
+      if response.body.empty? 
         Array.new
       else
         parse_data(response)[:data][:attributes]

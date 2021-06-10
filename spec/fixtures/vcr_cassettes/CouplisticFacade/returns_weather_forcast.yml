@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://couplistic-be.herokuapp.com/api/v1/weather?q=Denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 10 Jun 2021 22:13:05 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bca770027d666e45cc3288dcd8d2bea3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b3bc720-958f-4f0b-b77b-54700bdc52b3
+      X-Runtime:
+      - '0.061436'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"next_full_moon":1624579094,"sunrise_time":"05:32
+        AM","sunset_time":"08:28 PM","moonphase":"Waxing Crescent","moon_rise_time":"05:35
+        AM","moon_set_time":"09:02 PM","forecast_condition":["Partly cloudy","Partly
+        cloudy","Partly cloudy"],"forecast_icon":["//cdn.weatherapi.com/weather/64x64/day/116.png","//cdn.weatherapi.com/weather/64x64/day/116.png","//cdn.weatherapi.com/weather/64x64/day/116.png"],"moon_illumination_grade":["7","14","21"]}}}'
+  recorded_at: Thu, 10 Jun 2021 22:13:06 GMT
+recorded_with: VCR 6.0.0
