@@ -25,11 +25,10 @@ describe 'As an authenticated user when I visit the  dashboard' do
     it "when i fill out the form, i am redirected to TM path", :vcr do
       visit lovers_path
 
-      within ".tm_search" do
-        fill_in :city, with: "Morrison"
-        fill_in :keyword, with: "Reggae"
-        click_button("Search")
-      end
+      fill_in :city, with: "Morrison"
+      fill_in :keyword, with: "Reggae"
+      click_button("Search")
+
       expect(current_path).to eq(ticketmaster_path)
     end
   end
@@ -40,6 +39,8 @@ describe 'As an authenticated user when I visit the  dashboard' do
 
       expect(page).to have_content("Current Weather")
       expect(page).to have_field(:q)
+      fill_in :q, with: "Denver"
+
       click_button("Is It Sunny?")
       expect(current_path).to eq('/weather')
     end
