@@ -1,7 +1,11 @@
 class CouplisticFacade
   def self.get_events(user_id)
     body = CouplisticService.find_events_by_user_id(user_id)
-    @events = body[:data].map { |e| Event.new(e)  }
+    if body.empty?
+      return Array.new
+    else
+      @events = body[:data].map { |e| Event.new(e)  }
+    end
   end
 
   def self.get_weather_windows(city)
@@ -9,7 +13,7 @@ class CouplisticFacade
 
     response = conn.get("/api/v1/weather?q=#{city}")
     body = JSON.parse(response.body, symbolize_names: true)
-    
+
     Weather.new(body)
   end
 end
