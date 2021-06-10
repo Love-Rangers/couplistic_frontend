@@ -1,0 +1,193 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://couplistic-be.herokuapp.com/api/v1/events?user_id=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 10 Jun 2021 21:08:50 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 31053c22-1b64-4bf6-a4f2-1b242603d12b
+      X-Runtime:
+      - '0.099200'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 10 Jun 2021 21:08:51 GMT
+- request:
+    method: post
+    uri: https://accounts.spotify.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin20.3.0 x86_64) ruby/2.5.3p105
+      Authorization:
+      - Basic OGQ1NDU5OGI4NjA2NDQ3ZThmNDAxOThmMTc0Mzk4MWI6M2ExMjcxNDBjMzA4NDAyYmFkZTE4MmU3MTc0ZGE4ZDQ=
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - accounts.spotify.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Jun 2021 21:08:52 GMT
+      Content-Type:
+      - application/json
+      Set-Cookie:
+      - __HOST-sp_fid=29f8a0fc-f144-415c-9402-c050716123ad;Version=1;Path=/;Secure;HttpOnly;SameSite=None
+      - __Host-device_id=AQAecf8TzTwOeXQNlzhcp2tKUbhFzdMx4zt7BgyLVuAr1BX195xwq7kQddcisDPUr2BTLUtxLjF1S8UdDGxaheBWkpye4GGFAQ0;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+      Sp-Trace-Id:
+      - fec314fcbf69f09c
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - clear
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAACA6pWSkxOTi0uji/Jz07NU7JScgp0KTQJdC3z867Mcs53Tg8uMYk0cS8qLcjxi0z2inIzt8gIcjSocK/ULSuI8ErNNQ8qTI43d44PMjCsyHRLsnTxCg8wMS/MiPAuL8t0iTAwLU1W0lECmx5fUlmQCrIiNbEotQgomlpRkFmUWhyfCbTY2MzAoBYAAAD//wMA2MhgiI4AAAA=
+  recorded_at: Thu, 10 Jun 2021 21:08:52 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/recommendations?limit=20&seed_genres=romance,slow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin20.3.0 x86_64) ruby/2.5.3p105
+      Authorization:
+      - Bearer BQDq4QEvNKyjCoCgSt4Y4GruplNYcJZF78hRA0xGy-vpXJem7Rqc_7C_R01xiFb9DJWP47qhXKwviDX05uc
+      Host:
+      - api.spotify.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version,
+        X-Cloud-Trace-Context, client-token, content-access-token
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Thu, 10 Jun 2021 21:08:52 GMT
+      Server:
+      - envoy
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - clear
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+  recorded_at: Thu, 10 Jun 2021 21:08:52 GMT
+- request:
+    method: get
+    uri: https://couplistic-be.herokuapp.com/api/v1/ticketmaster?city=sdfjkgjgsdfgasf&keyword=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 10 Jun 2021 21:08:52 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - dc2939ea-e839-408b-99a9-86a1f1c66e94
+      X-Runtime:
+      - '0.176556'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 10 Jun 2021 21:08:52 GMT
+recorded_with: VCR 6.0.0

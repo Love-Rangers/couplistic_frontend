@@ -31,6 +31,15 @@ describe 'As an authenticated user when I visit the  dashboard' do
 
       expect(current_path).to eq(ticketmaster_path)
     end
+
+    it "shows an empty page when no results", :vcr do
+      visit lovers_path
+
+      fill_in :city, with: "sdfjkgjgsdfgasf"
+
+      click_button("Search")
+      expect(current_path).to eq(ticketmaster_path)
+    end
   end
 
   describe 'Weather Form' do

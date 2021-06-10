@@ -7,6 +7,7 @@ class TicketMasterFacade
     private
 
     def create_tickets(ticket_info)
+
       if ticket_info.nil?
         return Array.new
       else
