@@ -30,13 +30,17 @@ body, html {
   background-image: url("moon.jpeg");
 
   /* Full height */
-  height: 120%;
+  height: 135%;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -20px;
+}
+
+.container-left {
+  float: left;
 }
 
 .bg3 {
@@ -94,6 +98,22 @@ h2.bussin {
   font-size: 80px
 }
 
+h2.event-creation {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 75px;
+}
+
+h2.bussin-left {
+  padding-left: 75px;
+  font-size: 80px;
+}
+
+.container-left {
+  padding-left: 25px
+}
+
 h2.cool {
   font-family: 'Monallesia';
   text-align: center;
@@ -138,7 +158,7 @@ p.bussin {
 .carousel-inner {  height: 450px;}
 
 .simple-calendar {
-  padding-top: 75px;
+  padding-top: 25px;
   padding-left: 95px;
   padding-right: 95px;
   .calendar-heading {
@@ -249,4 +269,8 @@ footer .quick-links {
 .fa-ellipsis-h {
   color: white;
   padding: 2rem 0;
+}
+
+.card-group {
+  background-color: transparent;
 }

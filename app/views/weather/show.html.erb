@@ -1,6 +1,41 @@
-<<<<<<< HEAD
+
 <div class="bg4">
+
   <h2 class="bussin" style="padding: 20px">Moon & Weather</h2>
+
+  <% if @weather.class == String %>
+    <%= @weather %>
+  <% else %>
+    <p> Moon Phase:     <%= @weather.moonphase     %> </p>
+    <p> Next Full Moon: <%=@weather.next_full_moon %> </p>
+
+<div class="bg4">
+  <h2 class="bussin-left" style="padding: 20px">3 Day Forecast</h2>
+  <div class="container-left">
+    <div class="card-group">
+      <div class="card text-center" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title">Tomorrow</h5>
+          <%= image_tag(@weather.next_3_days_icons[0]) %>
+          <p class="card-text"><%= @weather.next_3_days_forecast[0] %></p>
+        </div>
+      </div>
+      <div class="card text-center" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= @weather.two_days_from_today %></h5>
+          <%= image_tag(@weather.next_3_days_icons[1]) %>
+          <p class="card-text"><%= @weather.next_3_days_forecast[1] %></p>
+        </div>
+      </div>
+      <div class="card text-center" style="width: 12rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= @weather.three_days_from_today %></h5>
+          <%= image_tag(@weather.next_3_days_icons[2]) %>
+          <p class="card-text"><%= @weather.next_3_days_forecast[2] %></p>
+        </div>
+      </div>
+    </div>
+  </div>
   <p> Moon Phase:     <%= @weather.moonphase     %> </p>
   <p> Next Full Moon: <%=@weather.next_full_moon %> </p>
 
@@ -8,21 +43,4 @@
   <p> Sunset: <%= @weather.sunset %> </p>
   <p> Moonrise: <%= @weather.moonrise %> </p>
   <p> Moonset: <%= @weather.moonset %> </p>
-
-  <h3> Next 3 Day Forecast: </h3>
-  <h5> Tomorrow:</h5>
-  <%= @weather.next_3_days_forecast[0] %>
-  
-  <h5> <%= @weather.two_days_from_today %>:</h5>
-  <%= @weather.next_3_days_forecast[1] %>
-
-  <h5> <%= @weather.three_days_from_today %>:</h5>
-  <%= @weather.next_3_days_forecast[2] %>
-
-
 </div>
-=======
-<%= Time.at(@weather[:next_full_moon]) %>
-Sunrise time: <%= @weather[:sunrise_time] %>
-Sunset time: <%= @weather[:sunset_time] %>
->>>>>>> main

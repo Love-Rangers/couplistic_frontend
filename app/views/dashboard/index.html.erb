@@ -90,9 +90,33 @@
       </div>
     </div>
 
-    <section class="calender">
-      <%= month_calendar do |date| %>
-      <%= date.day %>
+    <h2 class="event-creation"> Add Event to the Calendar </h2>
+    <section class="event-form center">
+      <%= form_with url: '/events', method: :post do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+
+        <%= f.label :start_time %>
+        <%= f.datetime_local_field :start_time %>
+
+        <%= f.submit %><span class="notice"><%= flash[:notice] %></span>
+
       <% end %>
     </section>
-  </div>
+
+  <section class="calender">
+    <%= month_calendar(events: @events) do |date, goals| %>
+      <%= date%>
+
+      <% goals.each do |goal| %>
+        <div>
+          <%= goal.name %><br>
+          <%= goal.location %>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+</div>
