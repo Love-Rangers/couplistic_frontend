@@ -29,6 +29,18 @@ describe 'As an authenticated user when I visit the  dashboard' do
       fill_in :keyword, with: "Reggae"
       click_button("Search")
 
+<<<<<<< HEAD
+=======
+      expect(current_path).to eq(ticketmaster_path)
+    end
+
+    it "shows an empty page when no results", :vcr do
+      visit lovers_path
+
+      fill_in :city, with: "sdfjkgjgsdfgasf"
+
+      click_button("Search")
+>>>>>>> main
       expect(current_path).to eq(ticketmaster_path)
     end
   end
@@ -42,6 +54,13 @@ describe 'As an authenticated user when I visit the  dashboard' do
       fill_in :q, with: "Denver"
 
       click_button("Is It Sunny?")
+<<<<<<< HEAD
+=======
+      expect(page).to have_content("Sorry, currently no weather 😞")
+
+      fill_in :q, with: "Denver"
+      click_button("Is It Sunny?")
+>>>>>>> main
       expect(current_path).to eq('/weather')
     end
   end

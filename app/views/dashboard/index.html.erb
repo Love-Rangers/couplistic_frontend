@@ -23,6 +23,12 @@
       </div>
       <div class="item">
         <div section class="weather">
+        <section class="weather-window">
+          <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <p>
+            The Next Full Moon is <%= @next_full_moon %>
+          </p>
+        </section>
       </div>
       <div class="item">
         <h2 class="bussin">
@@ -85,7 +91,7 @@
 
     <h2 class="event-creation"> Add Event to the Calendar </h2>
     <section class="event-form center">
-      <%= form_with url: '/events', method: :post do |f| %>
+      <%= form_with url: '/events', method: :post, local: true do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name %>
         <%= f.label :location %>
