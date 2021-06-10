@@ -22,6 +22,15 @@
         </section>
       </div>
       <div class="item">
+        <div section class="weather">
+        <section class="weather-window">
+          <iframe src="https://giphy.com/embed/fMAJPbkzgW6bmRdnXf" width="96" height="54" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <p>
+            The Next Full Moon is <%= @next_full_moon %>
+          </p>
+        </section>
+      </div>
+      <div class="item">
         <h2 class="bussin">
           <span style="color:pink">♥️</span>
           <span style="color:white">Current Weather</span>
@@ -38,13 +47,14 @@
                   <div class="d-flex justify-content-sm-center">
                   <br>
                   <%= form.button "Is It Sunny?", class: "btn btn-outline-success form-control" %></div>
-                </div>
+                </div></div>
               </div>
               <% end %>
             </div>
           </div>
         </div>
       </div>
+
       <div class="item">
         <h2 class="bussin">
           <span style="color:pink">♥️</span>
@@ -84,13 +94,11 @@
       <%= form_with url: '/events', method: :post do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name %>
-
         <%= f.label :location %>
         <%= f.text_field :location %><br>
 
         <%= f.label :start_time %>
         <%= f.datetime_local_field :start_time %>
-
         <%= f.submit %><span class="notice"><%= flash[:notice] %></span>
 
       <% end %>
@@ -99,7 +107,6 @@
   <section class="calender">
     <%= month_calendar(events: @events) do |date, goals| %>
       <%= date%>
-
       <% goals.each do |goal| %>
         <div>
           <%= goal.name %><br>
