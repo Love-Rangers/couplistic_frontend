@@ -7,7 +7,11 @@ class WeatherFacade
     private
 
     def create_weather(weather_info)
-      Weather.new(weather_info)
+      if weather_info.empty?
+        return "Sorry, currently no weather 😞"
+      else
+        Weather.new(weather_info)
+      end
     end
   end
 end
