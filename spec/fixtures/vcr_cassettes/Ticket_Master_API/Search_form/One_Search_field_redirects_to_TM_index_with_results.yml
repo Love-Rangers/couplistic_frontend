@@ -1,0 +1,200 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://couplistic-be.herokuapp.com/api/v1/events?user_id=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 10 Jun 2021 15:14:05 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - f40d0262-81ad-4229-b465-387b4428f60c
+      X-Runtime:
+      - '0.008605'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 10 Jun 2021 15:14:06 GMT
+- request:
+    method: post
+    uri: https://accounts.spotify.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin19.6.0 x86_64) ruby/2.5.3p105
+      Authorization:
+      - Basic OTljYWI1MTM1ZjI0NDRjNjlhOGNhMDlmMWVjNGU2OGQ6NzkxZjVmMjU2MmM4NGJlMzhhYTJmNjg1NDJkNDE2ZTc=
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - accounts.spotify.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Jun 2021 15:14:06 GMT
+      Content-Type:
+      - application/json
+      Set-Cookie:
+      - __HOST-sp_fid=719cbd94-4f04-473b-9664-57341bd3107a;Version=1;Path=/;Secure;HttpOnly;SameSite=None
+      - __Host-device_id=AQAHW3DuUQwfnNWowXP-Zra47mhyXYgKftMfJrpHgmLdAaCnTr-_x3awcmBrba81KwjB65P-FKxQX4i891mCZc4N42-WBhlPRo0;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+      Sp-Trace-Id:
+      - b997deb7a58a7bd3
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - clear
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAACA6pWSkxOTi0uji/Jz07NU7JScgp08o8MCbcs8yrPzCjJCk2M9woztUjPLQ4ziSooygjzSHYxLLIoKTM0SEwv98w3T3MtyktOK6yM8C+s8A+wLHIJq0gJMMs0MvMJDw9Odg7LCHRU0lECmx5fUlmQCrIiNbEotQgomlpRkFmUWhyfCbTY2MzAoBYAAAD//wMAgTiV+Y4AAAA=
+  recorded_at: Thu, 10 Jun 2021 15:14:06 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/recommendations?limit=20&seed_genres=romance,slow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin19.6.0 x86_64) ruby/2.5.3p105
+      Authorization:
+      - Bearer BQBOYTW9vJwihtjUa_JV58gmsV4ZprhVHcD1r8tv10agwIo7fErncfqyXOqxOP9rDVxdP6i26LWWScCVhQA
+      Host:
+      - api.spotify.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version,
+        X-Cloud-Trace-Context, client-token, content-access-token
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Content-Encoding:
+      - gzip
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Thu, 10 Jun 2021 15:14:06 GMT
+      Server:
+      - envoy
+      Via:
+      - HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - clear
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+  recorded_at: Thu, 10 Jun 2021 15:14:06 GMT
+- request:
+    method: get
+    uri: https://couplistic-be.herokuapp.com/api/v1/weather?q=Paris
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 10 Jun 2021 15:14:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7fc6b9bffe7655410c7e75da30aec23c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03cbecf0-c09c-4e7b-8182-9e2139a4562e
+      X-Runtime:
+      - '0.024381'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"next_full_moon":1624579094,"sunrise_time":"05:48
+        AM","sunset_time":"09:54 PM","moonphase":"Waxing Crescent","moon_rise_time":"05:40
+        AM","moon_set_time":"10:14 PM","forecast_condition":["Moderate rain","Patchy
+        rain possible","Partly cloudy"],"forecast_icon":["//cdn.weatherapi.com/weather/64x64/day/302.png","//cdn.weatherapi.com/weather/64x64/day/176.png","//cdn.weatherapi.com/weather/64x64/day/116.png"],"moon_illumination_grade":["7","14","21"]}}}'
+  recorded_at: Thu, 10 Jun 2021 15:14:07 GMT
+recorded_with: VCR 6.0.0
