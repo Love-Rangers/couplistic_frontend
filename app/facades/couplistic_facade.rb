@@ -13,7 +13,7 @@ class CouplisticFacade
 
     response = conn.get("/api/v1/weather?q=#{city}")
     body = JSON.parse(response.body, symbolize_names: true)
-
+require 'pry'; binding.pry
     Weather.new(body)
   end
 end
